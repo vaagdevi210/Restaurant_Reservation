@@ -23,6 +23,7 @@ jobs:
         pipenv install --dev
     - name: Run Migrations
       run: |
+        cd littlelemon
         pipenv run python manage.py makemigrations
         pipenv run python manage.py migrate
     - name: Run Django Service
